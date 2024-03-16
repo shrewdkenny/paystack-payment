@@ -1,6 +1,5 @@
 <template>
   <div>
-    <!-- You can customize this component as needed -->
     <button
       @click="initializePayment"
       class="bg-black text-white font-bold py-2 px-4 rounded mt-10"
@@ -31,7 +30,7 @@ export default {
       if (typeof window.PaystackPop !== "undefined") {
         const handler = window.PaystackPop.setup({
           key: "pk_test_45bea0e6f89e6dca5b5776a0715d360a3e72f1ee",
-          email: "shrewdkenny@gmail.com",
+          email: "Shrewdkenny@gmail.com",
           amount: props.amount * 100,
           ref: props.reference,
           currency: "NGN",

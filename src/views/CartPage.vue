@@ -23,7 +23,7 @@
     <div class="flex flex-col justify-center items-center mb-40">
       <p class="text-2xl font-black ml-10 mt-10">Total: ₦{{ totalPrice }}</p>
 
-      <!-- Pass totalPrice and other necessary props to Paystack component -->
+      <!-- Passing totalPrice and other necessary props to Paystack component -->
       <Paystack
         :amount="totalPrice"
         :email="email"
@@ -54,31 +54,12 @@ export default {
         return total + parseFloat(item.price.replace(/\₦/g, ""));
       }, 0);
     });
-    // Dummy function for generating reference (you can adjust as necessary)
-    const reference = () => {
-      let text = "";
-      let possible =
-        "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-      for (let i = 0; i < 10; i++)
-        text += possible.charAt(Math.floor(Math.random() * possible.length));
-      return text;
-    };
-    // Function to handle payment initiation
-    const payWithPaystack = () => {
-      // You can trigger Paystack payment process here
-      // You may also want to perform additional checks/validation before initiating payment
-      console.log("Initiating payment with Paystack...");
-    };
-
     return {
       cartItems,
       totalPrice,
-      reference,
-      payWithPaystack, // Expose payWithPaystack function
     };
   },
 };
 </script>
 
 <style lang="scss" scoped></style>
-../components/Paystack.vue
