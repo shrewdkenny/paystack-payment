@@ -7,6 +7,7 @@ export const useCart = defineStore("CartStore", {
   }),
   actions: {
     addToCart(product) {
+      alert("Addex To Cart");
       this.items.push(product);
       this.count++;
     },

@@ -89,17 +89,17 @@ export default {
     const handleIncreaseQty = (index) => {
       cartStore.increaseQty(index);
       const itemPrice = parseFloat(cartItems[index].price.replace(/₦/g, ""));
-      if (!isNaN(itemPrice)) {
-        cartItems[index].price = (itemPrice * 2).toFixed(2);
-      }
+
+      cartItems[index].price = (itemPrice * 2).toFixed(2);
     };
 
     const handleDecreaseQty = (index) => {
+      if (cartItems[index].quantity === 1) {
+        return;
+      }
       cartStore.decreaseQty(index);
       const itemPrice = parseFloat(cartItems[index].price.replace(/₦/g, ""));
-      if (!isNaN(itemPrice)) {
-        cartItems[index].price = (itemPrice / 2).toFixed(2);
-      }
+      cartItems[index].price = (itemPrice / 2).toFixed(2);
     };
     const removeFromCart = (index) => {
       cartItems.splice(index, 1);
