@@ -2,7 +2,7 @@
   <div class="h-screen w-full flex flex-col">
     <div class="flex flex-row gap-[300px] border-b-2 w-auto mt-[100px]">
       <h1 class="ml-[150px] w-[100px] text-2xl font-black">Products</h1>
-      <p class="text-2xl font-black ml-[190px]">Price</p>
+      <p class="text-2xl font-black ml-[100px]">Price</p>
     </div>
 
     <div
@@ -10,20 +10,39 @@
       v-for="item in cartItems"
       :key="item.id"
     >
-      <div class="ml-[150px] w-[600px] text-2xl flex flex-row space-x-10">
+      <div class="ml-[150px] w-[500px] text-2xl flex flex-row space-x-10">
         <img
           :src="item.pictures"
           alt="Product Image"
-          class="h-[50px] w-[50px]"
+          class="h-[50px] w-[40px]"
         />
-        <p class="text-lg font-black">{{ item.labelText }}</p>
+        <div class="flex flex-col">
+          <p class="text-lg font-black">{{ item.labelText }}</p>
+          <div class="flex flex-row gap-4">
+            <h1 class="text-sm font-normal">qty</h1>
+            <button
+              class="text-sm font-bold text-red-500 w-[20px] h-[20px] border-2 text-[10px] flex justify-center items-center"
+              @click="handleDecreaseQty()"
+            >
+              -
+            </button>
+            <div class="text-sm">
+              {{ cartQuantity }}
+            </div>
+            <button
+              class="text-sm font-bold text-green-400 w-[20px] h-[20px] border-2 text-[10px] flex justify-center items-center"
+              @click="handleIncreaseQty()"
+            >
+              +
+            </button>
+          </div>
+        </div>
       </div>
       <p class="flex flex-row justify-center font-black">{{ item.price }}</p>
     </div>
     <div class="flex flex-col justify-center items-center mb-40">
       <p class="text-2xl font-black ml-10 mt-10">Total: ₦{{ totalPrice }}</p>
 
-      <!-- Passing totalPrice and other necessary props to Paystack component -->
       <Paystack
         :amount="totalPrice"
         :email="email"
@@ -48,18 +67,33 @@ export default {
   setup() {
     const cartStore = useCart();
     const cartItems = cartStore.items;
+    const cartQuantity = computed(() => cartStore.quantity);
 
     const totalPrice = computed(() => {
       return cartItems.reduce((total, item) => {
         return total + parseFloat(item.price.replace(/\₦/g, ""));
       }, 0);
     });
+
+    const handleIncreaseQty = () => {
+      cartStore.increaseQty();
+      item.price *= 2;
+    };
+
+    const handleDecreaseQty = () => {
+      cartStore.decreaseQty();
+      item.price /= 2;
+    };
+
     return {
       cartItems,
       totalPrice,
+      cartQuantity,
+      handleIncreaseQty,
+      handleDecreaseQty,
     };
   },
+  methods: {},
 };
 </script>
-
 <style lang="scss" scoped></style>

@@ -4,6 +4,7 @@
     <h1 class="flex justify-center items-center text-sm font-bold mt-3">
       {{ product.labelText }}
     </h1>
+    
     <h2 class="flex justify-center items-center text-sm text-blue-600 mt-1">
       {{ product.price }}
     </h2>

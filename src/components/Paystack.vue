@@ -30,7 +30,7 @@ export default {
       if (typeof window.PaystackPop !== "undefined") {
         const handler = window.PaystackPop.setup({
           key: "pk_test_45bea0e6f89e6dca5b5776a0715d360a3e72f1ee",
-          email: "Shrewdkenny@gmail.com",
+          email: "shrewdkenny@gmail.com",
           amount: props.amount * 100,
           ref: props.reference,
           currency: "NGN",
@@ -43,6 +43,9 @@ export default {
 
     return {
       initializePayment,
+      user: {
+        email: "shrewdkenny@gmail.com",
+      },
     };
   },
 };
