@@ -10,14 +10,14 @@ export const useCart = defineStore("CartStore", {
       this.items.push(product);
       this.count++;
     },
-    increaseQty() {
-      this.quantity++;
+    increaseQty(index) {
+      this.items[index].quantity++;
     },
-    decreaseQty() {
-      if (this.quantity <= 1) {
-        return null;
+    decreaseQty(index) {
+      if (this.items[index].quantity <= 1) {
+        return;
       } else {
-        this.quantity--;
+        this.items[index].quantity--;
       }
     },
   },

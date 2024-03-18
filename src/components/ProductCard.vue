@@ -6,7 +6,7 @@
     </h1>
     
     <h2 class="flex justify-center items-center text-sm text-blue-600 mt-1">
-      {{ product.price }}
+      ₦{{ product.price }}
     </h2>
     <button
       @click="showProduct"

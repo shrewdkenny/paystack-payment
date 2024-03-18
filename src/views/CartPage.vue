@@ -11,6 +11,13 @@
       :key="item.id"
     >
       <div class="ml-[150px] w-[500px] text-2xl flex flex-row space-x-10">
+        <div class="mt-2">
+          <i
+            class="fa-solid fa-trash"
+            @click="removeFromCart(cartItems.indexOf(item))"
+          ></i>
+        </div>
+
         <img
           :src="item.pictures"
           alt="Product Image"
@@ -22,23 +29,23 @@
             <h1 class="text-sm font-normal">qty</h1>
             <button
               class="text-sm font-bold text-red-500 w-[20px] h-[20px] border-2 text-[10px] flex justify-center items-center"
-              @click="handleDecreaseQty()"
+              @click="handleDecreaseQty(cartItems.indexOf(item))"
             >
               -
             </button>
             <div class="text-sm">
-              {{ cartQuantity }}
+              {{ item.quantity }}
             </div>
             <button
               class="text-sm font-bold text-green-400 w-[20px] h-[20px] border-2 text-[10px] flex justify-center items-center"
-              @click="handleIncreaseQty()"
+              @click="handleIncreaseQty(cartItems.indexOf(item))"
             >
               +
             </button>
           </div>
         </div>
       </div>
-      <p class="flex flex-row justify-center font-black">{{ item.price }}</p>
+      <p class="flex flex-row justify-center font-black">₦{{ item.price }}</p>
     </div>
     <div class="flex flex-col justify-center items-center mb-40">
       <p class="text-2xl font-black ml-10 mt-10">Total: ₦{{ totalPrice }}</p>
@@ -67,30 +74,44 @@ export default {
   setup() {
     const cartStore = useCart();
     const cartItems = cartStore.items;
-    const cartQuantity = computed(() => cartStore.quantity);
 
     const totalPrice = computed(() => {
       return cartItems.reduce((total, item) => {
-        return total + parseFloat(item.price.replace(/\₦/g, ""));
+        const itemPrice = parseFloat(item.price.replace(/₦/g, ""));
+        if (!isNaN(itemPrice)) {
+          return total + itemPrice;
+        } else {
+          return total;
+        }
       }, 0);
     });
 
-    const handleIncreaseQty = () => {
-      cartStore.increaseQty();
-      item.price *= 2;
+    const handleIncreaseQty = (index) => {
+      cartStore.increaseQty(index);
+      const itemPrice = parseFloat(cartItems[index].price.replace(/₦/g, ""));
+      if (!isNaN(itemPrice)) {
+        cartItems[index].price = (itemPrice * 2).toFixed(2);
+      }
     };
 
-    const handleDecreaseQty = () => {
-      cartStore.decreaseQty();
-      item.price /= 2;
+    const handleDecreaseQty = (index) => {
+      cartStore.decreaseQty(index);
+      const itemPrice = parseFloat(cartItems[index].price.replace(/₦/g, ""));
+      if (!isNaN(itemPrice)) {
+        cartItems[index].price = (itemPrice / 2).toFixed(2);
+      }
+    };
+    const removeFromCart = (index) => {
+      cartItems.splice(index, 1);
+      cartStore.count -= 1;
     };
 
     return {
       cartItems,
       totalPrice,
-      cartQuantity,
       handleIncreaseQty,
       handleDecreaseQty,
+      removeFromCart,
     };
   },
   methods: {},

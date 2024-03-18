@@ -135,6 +135,7 @@
 <script>
 import ProductCard from "../components/ProductCard.vue";
 import { useCart } from "@/stores/CartStore";
+import { Toaster } from "sonner";
 
 export default {
   name: "Test",
@@ -148,58 +149,66 @@ export default {
         {
           id: 1,
           labelText: "Plain white shirt",
-          price: "₦29.00",
+          price: "2500",
           pictures: ["./src/assets/images/one.png"],
           button: "Add To Cart",
+          quantity: 1,
         },
         {
           id: 2,
           labelText: "Denim jacket",
-          price: "₦69.00",
+          price: "3000",
           pictures: ["./src/assets/images/thirteen.png"],
           button: "Add To Cart",
+          quantity: 1,
         },
         {
           id: 3,
           labelText: "Black polo shirt",
-          price: "₦49.00",
+          price: "1200",
           pictures: ["./src/assets/images/three.png"],
           button: "Add To Cart",
+          quantity: 1,
         },
         {
           id: 4,
           labelText: "Blue Sweatshirt",
-          price: "₦79.00",
+          price: "1000",
           pictures: ["./src/assets/images/four.png"],
           button: "Add To Cart",
+          quantity: 1,
         },
         {
           id: 5,
           labelText: "Blue Plain Shirt",
-          price: "#89.00",
+          price: "2400",
           pictures: ["./src/assets/images/two.png"],
           button: "Add To Cart",
+          quantity: 1,
         },
         {
           id: 6,
           labelText: "Dark Blue Shirt",
-          price: "₦79.00",
+          price: "1300",
           pictures: ["./src/assets/images/five.png"],
           button: "Add To Cart",
+          quantity: 1,
         },
         {
           id: 7,
           labelText: "Outcast T Shirt",
-          price: "₦19.00",
+          price: "1500",
           pictures: ["./src/assets/images/seven.png"],
           button: "Add To Cart",
+          quantity: 1,
         },
         {
           id: 8,
           labelText: "Polo Plain Shirt",
-          price: "₦29.00",
+          price: "2000",
           pictures: ["./src/assets/images/eight.png"],
           button: "Add To Cart",
+          quantity: 1,
         },
       ],
     };
@@ -209,7 +218,7 @@ export default {
     handleAddToCart(product) {
       const cartStore = useCart();
       cartStore.addToCart(product);
-      this.$router.push("/cart");
+      this.$router("/cart");
     },
   },
 };
