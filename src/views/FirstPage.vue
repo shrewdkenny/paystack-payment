@@ -222,9 +222,9 @@ export default {
         imageUrl:
           "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNlP8OJ8McU0-mWFp9sn5HBUlu_bTLXuMoldMX3og4YA&s",
         position: "top-end",
-        width: "400px",
-        imageHeight: "100px",
-        font: "15px",
+        width: "250px",
+        imageHeight: "90px",
+        font: "2px",
         color: "black",
         title: "added to cart",
         showConfirmButton: false,

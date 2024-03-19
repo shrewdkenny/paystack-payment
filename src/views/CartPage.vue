@@ -67,9 +67,7 @@ import { useCart } from "@/stores/CartStore";
 import Paystack from "../components/Paystack.vue";
 import { computed } from "vue";
 
-
 export default {
-
   components: {
     Paystack,
   },
@@ -107,6 +105,7 @@ export default {
       cartItems.splice(index, 1);
       cartStore.count -= 1;
     };
+  
 
     return {
       cartItems,
@@ -114,6 +113,7 @@ export default {
       handleIncreaseQty,
       handleDecreaseQty,
       removeFromCart,
+    
     };
   },
   methods: {},

@@ -2,14 +2,15 @@
   <div>
     <button
       @click="initializePayment"
-      class="bg-black text-white font-bold py-2 px-4 rounded mt-10"
-    >
-      proceed to payment
+      class="bg-black text-white font-bold py-2 px-7 rounded mt-10"
+    >Pay
     </button>
   </div>
 </template>
 
 <script>
+import { useCart } from "@/stores/CartStore";
+
 export default {
   props: {
     amount: {
@@ -40,9 +41,13 @@ export default {
         console.error("Paystack SDK not loaded");
       }
     };
-
+    const processPayment = () => {
+      const cartStore = useCart();
+      cartStore.clearCart();
+    };
     return {
       initializePayment,
+      processPayment,
       user: {
         email: "shrewdkenny@gmail.com",
       },
