@@ -28,6 +28,7 @@ export default {
     },
   },
   setup(props) {
+    const cartStore = useCart();
     const initializePayment = () => {
       if (typeof window.PaystackPop !== "undefined") {
         const handler = window.PaystackPop.setup({
@@ -43,12 +44,11 @@ export default {
       }
     };
     const processPayment = () => {
-      const cartStore = useCart();
       cartStore.clearCart();
     };
+
     return {
       initializePayment,
-      processPayment,
     };
   },
 };

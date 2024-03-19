@@ -1,7 +1,7 @@
 <template>
   <main class="h-screen w-full bg-[#ffff]">
     <section
-      class="first py-[100px] bg-cover bg-no-repeat flex flex-col justify-end items-end"
+      class="first py-[100px] bg-cover bg-no-repeat flex flex-col justify-end items-end w-full "
     >
       <div class="w-[500px] mb-[300px]">
         <h1 class="text-white text-5xl font-mono font-semibold mb-[20px]">
@@ -224,7 +224,6 @@ export default {
         position: "top-end",
         width: "250px",
         imageHeight: "90px",
-        font: "2px",
         color: "black",
         title: "added to cart",
         showConfirmButton: false,
