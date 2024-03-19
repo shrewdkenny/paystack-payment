@@ -2,8 +2,9 @@
   <div>
     <button
       @click="initializePayment"
-      class="bg-black text-white font-bold py-2 px-7 rounded mt-10"
-    >Pay
+      class="bg-black text-white font-bold py-2 px-7 rounded mt-10 mb-5"
+    >
+      Pay
     </button>
   </div>
 </template>
@@ -48,9 +49,6 @@ export default {
     return {
       initializePayment,
       processPayment,
-      user: {
-        email: "shrewdkenny@gmail.com",
-      },
     };
   },
 };
