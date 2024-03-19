@@ -67,7 +67,9 @@ import { useCart } from "@/stores/CartStore";
 import Paystack from "../components/Paystack.vue";
 import { computed } from "vue";
 
+
 export default {
+
   components: {
     Paystack,
   },

@@ -1,4 +1,5 @@
 import { defineStore } from "pinia";
+
 export const useCart = defineStore("CartStore", {
   state: () => ({
     items: [],
@@ -7,7 +8,6 @@ export const useCart = defineStore("CartStore", {
   }),
   actions: {
     addToCart(product) {
-      alert("Addex To Cart");
       this.items.push(product);
       this.count++;
     },

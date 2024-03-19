@@ -18,6 +18,7 @@
 </template>
 
 <script>
+
 export default {
   name: "Test",
   created() {},
@@ -33,6 +34,7 @@ export default {
   methods: {
     showProduct() {
       this.$emit("addingToCart", this.product);
+     
     },
   },
 };

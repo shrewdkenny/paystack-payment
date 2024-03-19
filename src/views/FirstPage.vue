@@ -135,7 +135,7 @@
 <script>
 import ProductCard from "../components/ProductCard.vue";
 import { useCart } from "@/stores/CartStore";
-import { Toaster } from "sonner";
+import Swal from "sweetalert2";
 
 export default {
   name: "Test",
@@ -149,7 +149,7 @@ export default {
         {
           id: 1,
           labelText: "Plain white shirt",
-          price: "2500",
+          price: "2500.00",
           pictures: ["./src/assets/images/one.png"],
           button: "Add To Cart",
           quantity: 1,
@@ -157,7 +157,7 @@ export default {
         {
           id: 2,
           labelText: "Denim jacket",
-          price: "3000",
+          price: "3000.00",
           pictures: ["./src/assets/images/thirteen.png"],
           button: "Add To Cart",
           quantity: 1,
@@ -165,7 +165,7 @@ export default {
         {
           id: 3,
           labelText: "Black polo shirt",
-          price: "1200",
+          price: "1200.00",
           pictures: ["./src/assets/images/three.png"],
           button: "Add To Cart",
           quantity: 1,
@@ -173,7 +173,7 @@ export default {
         {
           id: 4,
           labelText: "Blue Sweatshirt",
-          price: "1000",
+          price: "1000.00",
           pictures: ["./src/assets/images/four.png"],
           button: "Add To Cart",
           quantity: 1,
@@ -181,7 +181,7 @@ export default {
         {
           id: 5,
           labelText: "Blue Plain Shirt",
-          price: "2400",
+          price: "2400.00",
           pictures: ["./src/assets/images/two.png"],
           button: "Add To Cart",
           quantity: 1,
@@ -189,7 +189,7 @@ export default {
         {
           id: 6,
           labelText: "Dark Blue Shirt",
-          price: "1300",
+          price: "1300.00",
           pictures: ["./src/assets/images/five.png"],
           button: "Add To Cart",
           quantity: 1,
@@ -197,7 +197,7 @@ export default {
         {
           id: 7,
           labelText: "Outcast T Shirt",
-          price: "1500",
+          price: "1500.00",
           pictures: ["./src/assets/images/seven.png"],
           button: "Add To Cart",
           quantity: 1,
@@ -205,7 +205,7 @@ export default {
         {
           id: 8,
           labelText: "Polo Plain Shirt",
-          price: "2000",
+          price: "2000.00",
           pictures: ["./src/assets/images/eight.png"],
           button: "Add To Cart",
           quantity: 1,
@@ -218,7 +218,18 @@ export default {
     handleAddToCart(product) {
       const cartStore = useCart();
       cartStore.addToCart(product);
-      this.$router("/cart");
+      Swal.fire({
+        imageUrl:
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNlP8OJ8McU0-mWFp9sn5HBUlu_bTLXuMoldMX3og4YA&s",
+        position: "top-end",
+        width: "400px",
+        imageHeight: "100px",
+        font: "15px",
+        color: "black",
+        title: "added to cart",
+        showConfirmButton: false,
+        timer: 1000,
+      });
     },
   },
 };
