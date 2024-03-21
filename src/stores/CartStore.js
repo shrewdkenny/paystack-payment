@@ -4,11 +4,10 @@ export const useCart = defineStore("CartStore", {
   state: () => ({
     items: [],
     count: 0,
-    quantity: 1,
   }),
   actions: {
     addToCart(product) {
-      this.items.push(product);
+      this.items.push({ ...product, quantity: 1, initialPrice: product.price });
       this.count++;
     },
     increaseQty(index) {

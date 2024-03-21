@@ -1,7 +1,7 @@
 <template>
   <main class="h-screen w-full bg-[#ffff]">
     <section
-      class="first py-[100px] bg-cover bg-no-repeat flex flex-col justify-end items-end w-full "
+      class="first py-[100px] bg-cover bg-no-repeat flex flex-col justify-end items-end w-full"
     >
       <div class="w-[500px] mb-[300px]">
         <h1 class="text-white text-5xl font-mono font-semibold mb-[20px]">
@@ -149,7 +149,7 @@ export default {
         {
           id: 1,
           labelText: "Plain white shirt",
-          price: "2500.00",
+          price: "1000.00",
           pictures: ["./src/assets/images/one.png"],
           button: "Add To Cart",
           quantity: 1,
@@ -222,12 +222,13 @@ export default {
         imageUrl:
           "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNlP8OJ8McU0-mWFp9sn5HBUlu_bTLXuMoldMX3og4YA&s",
         position: "top-end",
-        width: "250px",
-        imageHeight: "90px",
+        width: "300px",
+        heightAuto: "true",
+        imageHeight: "80px",
         color: "black",
-        title: "added to cart",
+        title: "Added To Cart",
         showConfirmButton: false,
-        timer: 1000,
+        timer: 500,
       });
     },
   },

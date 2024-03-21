@@ -11,7 +11,7 @@
 
 <script>
 import { useCart } from "@/stores/CartStore";
-
+import { handleError } from "vue";
 export default {
   props: {
     amount: {
@@ -26,6 +26,10 @@ export default {
       type: String,
       required: true,
     },
+    callback: {
+      type: Function,
+      required: true,
+    },
   },
   setup(props) {
     const cartStore = useCart();
@@ -37,16 +41,18 @@ export default {
           amount: props.amount * 100,
           ref: props.reference,
           currency: "NGN",
+          callback: props.callback,
         });
-        handler.openIframe();
+        handler
+          .openIframe()
+          .then((result) => {
+            cartStore.clearCart();
+          })
+          .catch((err) => {});
       } else {
         console.error("Paystack SDK not loaded");
       }
     };
-    const processPayment = () => {
-      cartStore.clearCart();
-    };
-
     return {
       initializePayment,
     };
