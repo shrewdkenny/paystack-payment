@@ -92,6 +92,15 @@
 import ProductCard from "../components/ProductCard.vue";
 import { useCart } from "@/stores/CartStore";
 import Swal from "sweetalert2";
+import oneImage from "@/assets/images/one.png";
+import twoImage from "@/assets/images/two.png";
+import threeImage from "@/assets/images/three.png";
+import fourImage from "@/assets/images/four.png";
+import fiveImage from "@/assets/images/five.png";
+import sixImage from "@/assets/images/six.png";
+import sevenImage from "@/assets/images/seven.png";
+import eightImage from "@/assets/images/eight.png";
+import thirteenImage from "@/assets/images/thirteen.png";
 
 export default {
   name: "Test",
@@ -106,7 +115,7 @@ export default {
           id: 1,
           labelText: "Plain white shirt",
           price: "1000.00",
-          pictures: [require("@/assets/images/one.png")],
+          pictures: [oneImage],
           button: "Add To Cart",
           quantity: 1,
         },
@@ -114,7 +123,7 @@ export default {
           id: 2,
           labelText: "Denim jacket",
           price: "3000.00",
-          pictures: ["./src/assets/images/thirteen.png"],
+          pictures: [thirteenImage],
           button: "Add To Cart",
           quantity: 1,
         },
@@ -122,7 +131,7 @@ export default {
           id: 3,
           labelText: "Black polo shirt",
           price: "1200.00",
-          pictures: ["./src/assets/images/three.png"],
+          pictures: [threeImage],
           button: "Add To Cart",
           quantity: 1,
         },
@@ -130,7 +139,7 @@ export default {
           id: 4,
           labelText: "Blue Sweatshirt",
           price: "1000.00",
-          pictures: ["./src/assets/images/four.png"],
+          pictures: [fourImage],
           button: "Add To Cart",
           quantity: 1,
         },
@@ -138,7 +147,7 @@ export default {
           id: 5,
           labelText: "Blue Plain Shirt",
           price: "2400.00",
-          pictures: ["./src/assets/images/two.png"],
+          pictures: [twoImage],
           button: "Add To Cart",
           quantity: 1,
         },
@@ -146,7 +155,7 @@ export default {
           id: 6,
           labelText: "Dark Blue Shirt",
           price: "1300.00",
-          pictures: ["./src/assets/images/five.png"],
+          pictures: [fiveImage],
           button: "Add To Cart",
           quantity: 1,
         },
@@ -154,7 +163,7 @@ export default {
           id: 7,
           labelText: "Outcast T Shirt",
           price: "1500.00",
-          pictures: ["./src/assets/images/seven.png"],
+          pictures: [sevenImage],
           button: "Add To Cart",
           quantity: 1,
         },
@@ -162,7 +171,7 @@ export default {
           id: 8,
           labelText: "Polo Plain Shirt",
           price: "2000.00",
-          pictures: ["./src/assets/images/eight.png"],
+          pictures: [eightImage],
           button: "Add To Cart",
           quantity: 1,
         },
