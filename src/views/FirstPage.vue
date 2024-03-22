@@ -1,7 +1,7 @@
 <template>
   <main class="h-screen w-full bg-[#ffff]">
     <section
-      class="bg-[url('@/assets/images/six.png')] bg-cover h-[40vh] lg:py-[100px] lg:bg-cover bg-no-repeat flex flex-col lg:justify-end items-end w-full"
+      class="bg-[url('@/assets/images/six.png')] bg-cover h-[50vh] lg:py-[100px] lg:bg-cover bg-no-repeat flex flex-col lg:justify-end items-end w-full lg:h-[80vh]"
     >
       <div class="w-[500px] mb-[300px]">
         <h1
@@ -23,7 +23,7 @@
         <p class="mt-5 font-light">Recently added shirts!</p>
       </div>
       <div
-        class="mt-[100px] flex flex-wrap justify-between space-x-5 px-10 w-full"
+        class="mt-10 lg:mt-[100px] flex flex-wrap justify-between space-x-5 px-10 lg:w-full"
       >
         <ProductCard
           v-for="product in products"

@@ -1,11 +1,11 @@
 <template>
   <div class="flex flex-col justify-between items-center relative">
-    <img :src="product.pictures[0]" alt="" />
-    <h1 class="flex justify-center items-center text-sm font-bold mt-10">
+    <img :src="product.pictures[0]" alt="" class="rounded-lg"/>
+    <h1 class="flex justify-center items-center text-sm font-bold mt-7">
       {{ product.labelText }}
     </h1>
 
-    <h2 class="flex justify-center items-center text-sm text-blue-600 mb-3">
+    <h2 class="flex justify-center items-center text-sm text-blue-600 mb-7">
       ₦{{ product.price }}
     </h2>
     <button
