@@ -24,12 +24,12 @@
         </div>
       </div>
       <div class="text-orange-500 flex flex-row justify-between">
-        <div class="flex gap-2">
+        <div
+          @click="removeFromCart(cartItems.indexOf(item))"
+          class="flex gap-2 cursor-pointer"
+        >
           <div class="text-sm">
-            <i
-              class="fa-solid fa-trash"
-              @click="removeFromCart(cartItems.indexOf(item))"
-            ></i>
+            <i class="fa-solid fa-trash"></i>
           </div>
           <p class="text-sm">REMOVE</p>
         </div>
