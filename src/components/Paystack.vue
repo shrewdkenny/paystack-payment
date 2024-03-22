@@ -2,9 +2,9 @@
   <div>
     <button
       @click="initializePayment"
-      class="bg-black text-white font-bold py-2 px-7 rounded mt-10 mb-5"
+      class="h-[50px] w-[100%] rounded-none lg:w-[100%] bg-orange-400 text-white font-normal py-2 px-7 lg:rounded mt-10 mb-5"
     >
-      Pay
+      Checkout
     </button>
   </div>
 </template>

@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col justify-between items-center relative">
     <img :src="product.pictures[0]" alt="" class="rounded-lg" />
-    <h1 class="flex justify-center items-center text-sm font-bold mt-7">
+    <h1 class="flex justify-center items-center text-sm font-bold mt-10">
       {{ product.labelText }}
     </h1>
 

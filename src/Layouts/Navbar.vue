@@ -20,7 +20,7 @@
         <router-link to="/cart">
           <div class="text-2xl"><i class="fa-solid fa-cart-shopping"></i></div>
           <h1
-            class="absolute top-[-19px] left-2 text-lg lg:absolute lg:top-[-19px] lg:left-2 text-orange-900 lg:text-xl font-serif"
+            class="absolute top-[-19px] left-2 text-lg lg:absolute lg:top-[-16px] lg:left-2 text-orange-500 lg:text-sm font-serif"
           >
             {{ increaseCount.count }}
           </h1>
