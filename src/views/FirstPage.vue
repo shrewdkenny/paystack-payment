@@ -106,7 +106,7 @@ export default {
           id: 1,
           labelText: "Plain white shirt",
           price: "1000.00",
-          pictures: ["./src/assets/images/one.png"],
+          pictures: [require("@/assets/images/one.png")],
           button: "Add To Cart",
           quantity: 1,
         },
