@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="flex px-5 flex-row w-full justify-between mt-5 lg:flex lg:flex-row lg:justify-between lg:px-20 lg:mt-8 h-[5vh]"
+    class="flex px-5 flex-row w-full justify-between my-5 lg:flex lg:flex-row lg:justify-between lg:px-20 lg:mt-8 h-[5vh]"
   >
     <div class="flex text-2xl lg:hidden">
       <i class="fa-solid fa-bars"></i>
