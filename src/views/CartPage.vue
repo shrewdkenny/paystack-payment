@@ -1,6 +1,6 @@
 <template>
   <!-- small screen -->
-  <div class="sm:h-screen w-full flex flex-col bg-[#f1f1f2] lg:hidden">
+  <div class="h-screen w-full flex flex-col bg-[#f1f1f2]">
     <h1 class="text-sm text-gray-600 p-2">CART SUMMARY</h1>
     <div class="flex flex-row justify-between mt-2 p-2 bg-white">
       <p class="text-sm font-normal text-gray-600">Subtotal</p>
@@ -62,7 +62,7 @@
 
   <!-- large screen -->
 
-  <div
+  <!-- <div
     class="lg:h-screen lg:w-full flex flex-row px-40 gap-10 bg-[#f1f1f2] relative"
   >
     <div class="bg-white w-[70%] gap-10 flex flex-col mt-5 rounded-lg h-[100%]">
@@ -129,7 +129,7 @@
         :embed="true"
       />
     </div>
-  </div>
+  </div> -->
 </template>
 
 <script>

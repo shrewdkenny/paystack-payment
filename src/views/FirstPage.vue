@@ -23,7 +23,7 @@
         <p class="mt-5 font-light">Recently added shirts!</p>
       </div>
       <div
-        class="mt-10 lg:mt-[100px] flex flex-wrap justify-between space-x-5 px-10 lg:w-full"
+        class="mt-10 lg:mt-[100px] flex flex-wrap justify-between space-x-5 px-10 w-full"
       >
         <ProductCard
           v-for="product in products"
