@@ -52,10 +52,8 @@
 
       <Paystack
         :amount="totalPrice"
-        :email="email"
-        :reference="reference"
         :callback="processPayment"
-        :close="close"
+        :close="closeFunction"
         :embed="true"
       />
     </div>
@@ -106,6 +104,14 @@ export default {
       cartItems.splice(index, 1);
       cartStore.count -= 1;
     };
+    const processPayment = (response) => {
+      if (response.status === "success") {
+        cartStore.clearCart();
+      }
+    };
+    const closeFunction = () => {
+      console.log("payment closed");
+    };
 
     return {
       cartItems,
@@ -113,6 +119,8 @@ export default {
       handleIncreaseQty,
       handleDecreaseQty,
       removeFromCart,
+      processPayment,
+      closeFunction,
     };
   },
   methods: {},

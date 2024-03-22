@@ -21,7 +21,7 @@ export const useCart = defineStore("CartStore", {
       }
     },
     clearCart() {
-      this.items = [];
+      this.items.splice(0, this.items.length);
       this.count = 0;
     },
   },
