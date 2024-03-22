@@ -97,7 +97,6 @@ import twoImage from "@/assets/images/two.png";
 import threeImage from "@/assets/images/three.png";
 import fourImage from "@/assets/images/four.png";
 import fiveImage from "@/assets/images/five.png";
-import sixImage from "@/assets/images/six.png";
 import sevenImage from "@/assets/images/seven.png";
 import eightImage from "@/assets/images/eight.png";
 import thirteenImage from "@/assets/images/thirteen.png";
