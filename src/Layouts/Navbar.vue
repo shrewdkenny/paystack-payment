@@ -1,20 +1,26 @@
 <template>
-  <nav class="flex flex-row justify-between px-20 mt-8 h-[5vh]">
+  <nav
+    class="flex px-5 flex-row w-full justify-between mt-5 lg:flex lg:flex-row lg:justify-between lg:px-20 lg:mt-8 h-[5vh]"
+  >
+    <div class="flex text-2xl lg:hidden">
+      <i class="fa-solid fa-bars"></i>
+    </div>
     <div class="font-thin font-mono text-2xl drop-shadow-2xl">
       <router-link to="/"> NorthStar</router-link>
     </div>
-    <ul class="flex flex-row space-x-4 font-semibold">
+    <ul class="hidden lg:flex flex-row space-x-4 font-semibold">
       <li><router-link to="/"> HOME</router-link></li>
       <li>ABOUT</li>
       <li>CONTACT US</li>
     </ul>
-    <div class="flex flex-row gap-5 font-normal font-mono text-xl">
-      <i class="fa-regular fa-user"></i>
-      <div class="relative">
+    <div class="lg:flex flex-row gap-5 font-normal font-mono text-xl">
+      <div class="hidden"><i class="fa-regular fa-user"></i></div>
+
+      <div class="relative flex">
         <router-link to="/cart">
-          <i class="fa-solid fa-cart-shopping"></i>
+          <div class="text-2xl"><i class="fa-solid fa-cart-shopping"></i></div>
           <h1
-            class="absolute top-[-19px] left-2 text-orange-500 text-sm font-serif"
+            class="absolute top-[-19px] left-2 text-xl lg:absolute lg:top-[-19px] lg:left-2 text-orange-500 lg:text-sm font-serif"
           >
             {{ increaseCount.count }}
           </h1>

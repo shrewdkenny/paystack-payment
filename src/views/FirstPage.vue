@@ -1,14 +1,16 @@
 <template>
   <main class="h-screen w-full bg-[#ffff]">
     <section
-      class="first py-[100px] bg-cover bg-no-repeat flex flex-col justify-end items-end w-full"
+      class="bg-[url('@/assets/images/six.png')] bg-cover h-[40vh] lg:py-[100px] lg:bg-cover bg-no-repeat flex flex-col lg:justify-end items-end w-full"
     >
       <div class="w-[500px] mb-[300px]">
-        <h1 class="text-white text-5xl font-mono font-semibold mb-[20px]">
+        <h1
+          class="hidden lg:text-5xl text-white font-mono font-semibold mb-[20px]"
+        >
           STYLIST PICKS BEAT THE HEAT
         </h1>
         <button
-          class="text-white text-xl font-medium border-white border-[3px] ml-[50px]"
+          class="hidden lg:text-xl text-white font-medium border-white border-[3px] ml-[50px]"
         >
           SHOP NOW
         </button>
@@ -31,7 +33,7 @@
         />
       </div>
       <div
-        class="mt-[90px] flex flex-row justify-between space-x-5 px-10 w-full"
+        class="flex-col gap-2 mt-20 lg:mt-[90px] flex lg:flex-row justify-between space-x-5 px-10 w-full h-40"
       >
         <div class="flex flex-row space-x-[20px]">
           <div class="text-blue-600 text-2xl">
@@ -79,52 +81,6 @@
             <p class="text-gray-600 w-[220px] tracking-wide mt-[15px]">
               Simply return it within 30 days for an exchange.
             </p>
-          </div>
-        </div>
-      </div>
-
-      <div
-        class="h-[80vh] w-full flex flex-row mt-[100px] justify-between px-10"
-      >
-        <div
-          class="bg-black w-[700px] h-[350px] text-white flex flex-row justify-center"
-        >
-          <div class="flex flex-col mt-[80px] items-center">
-            <h1 class="text-2xl flex flex-row justify-center items-center">
-              PEACE OF MIND
-            </h1>
-            <p class="mt-5 break-words w-[350px]">
-              A one-stop platform for all your fashion needs,
-              <span class="flex flex-row justify-center items-center">
-                hassle-free. Buy with a peace of mind.</span
-              >
-            </p>
-            <button
-              class="flex flex-row justify-center items-center mt-5 bg-white w-[120px] h-[45px] text-blue-600 text-sm"
-            >
-              BUY NOW
-            </button>
-          </div>
-        </div>
-
-        <div
-          class="bg-black w-[600px] h-[350px] text-white flex flex-row justify-center"
-        >
-          <div class="flex flex-col mt-[80px] items-center">
-            <h1 class="text-2xl flex flex-row justify-center items-center">
-              BUY 2 GET 1 FREE
-            </h1>
-            <p class="mt-5 break-words w-[350px]">
-              End of season sale. Buy any 2 items of your
-              <span class="flex flex-row justify-center items-center">
-                choice and get 1 free.</span
-              >
-            </p>
-            <button
-              class="flex flex-row justify-center items-center mt-5 bg-white w-[120px] h-[45px] text-blue-600 text-sm"
-            >
-              BUY NOW
-            </button>
           </div>
         </div>
       </div>
@@ -234,9 +190,3 @@ export default {
   },
 };
 </script>
-
-<style>
-.first {
-  background-image: url("@/assets/images/six.png");
-}
-</style>

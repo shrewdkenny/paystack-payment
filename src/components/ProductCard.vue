@@ -1,16 +1,16 @@
 <template>
-  <div class="flex flex-col justify-between items-center">
+  <div class="flex flex-col justify-between items-center relative">
     <img :src="product.pictures[0]" alt="" />
-    <h1 class="flex justify-center items-center text-sm font-bold mt-3">
+    <h1 class="flex justify-center items-center text-sm font-bold mt-10">
       {{ product.labelText }}
     </h1>
-    
-    <h2 class="flex justify-center items-center text-sm text-blue-600 mt-1">
+
+    <h2 class="flex justify-center items-center text-sm text-blue-600 mb-3">
       ₦{{ product.price }}
     </h2>
     <button
       @click="showProduct"
-      class="m-5 bg-orange-800 flex h-[50px] w-[200px] rounded-lg justify-center text-center items-center text-sm text-white"
+      class="m-5 bg-black flex h-[50px] w-[100%] justify-center text-center items-center text-sm text-white absolute top-[290px]"
     >
       Add To Cart
     </button>
@@ -18,7 +18,6 @@
 </template>
 
 <script>
-
 export default {
   name: "Test",
   created() {},
@@ -28,13 +27,11 @@ export default {
   props: {
     product: {
       type: Object,
-     
     },
   },
   methods: {
     showProduct() {
       this.$emit("addingToCart", this.product);
-     
     },
   },
 };
