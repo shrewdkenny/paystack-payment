@@ -190,7 +190,7 @@ export default {
       Swal.fire({
         imageUrl:
           "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNlP8OJ8McU0-mWFp9sn5HBUlu_bTLXuMoldMX3og4YA&s",
-        position: "top-end",
+        position: "top-center",
         width: "300px",
         heightAuto: "true",
         imageHeight: "80px",
