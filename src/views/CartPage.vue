@@ -1,5 +1,4 @@
 <template>
-  <!-- small screen -->
   <div class="h-screen w-full flex flex-col bg-[#f1f1f2]">
     <h1 class="text-sm text-gray-600 p-2">CART SUMMARY</h1>
     <div class="flex flex-row justify-between mt-2 p-2 bg-white">

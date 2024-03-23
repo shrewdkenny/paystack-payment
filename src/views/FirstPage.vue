@@ -22,16 +22,21 @@
         <h1 class="text-3xl font-normal">Discover NEW Arrivals</h1>
         <p class="mt-5 font-light">Recently added shirts!</p>
       </div>
-      <div
-        class="mt-10 lg:mt-[100px] flex flex-wrap justify-between space-x-5 px-10 w-full"
-      >
-        <ProductCard
-          v-for="product in products"
-          :key="product.id"
-          :product="product"
-          @addingToCart="handleAddToCart(product)"
-        />
+
+      <div class="mt-10 lg:mt-[100px] px-5 w-full">
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+        >
+          <ProductCard
+            v-for="product in products"
+            :key="product.id"
+            :product="product"
+            @addingToCart="handleAddToCart(product)"
+            
+          />
+        </div>
       </div>
+
       <div
         class="flex-col gap-2 mt-20 lg:mt-[90px] flex lg:flex-row justify-between space-x-5 px-10 w-full h-40"
       >
