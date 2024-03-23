@@ -1,11 +1,6 @@
 <template>
-  <div class="h-screen w-full flex flex-col bg-[#f1f1f2]">
-    <h1 class="text-sm text-gray-600 p-2">CART SUMMARY</h1>
-    <div class="flex flex-row justify-between mt-2 p-2 bg-white">
-      <p class="text-sm font-normal text-gray-600">Subtotal</p>
-      <p class="text-sm font-normal">₦{{ totalPrice }}</p>
-    </div>
-    <h1 class="sm:text-sm text-gray-600 p-2 mt-3">CART</h1>
+  <div class="h-[100vh] w-full flex flex-col bg-[#f1f1f2]">
+    <h1 class="text-sm font-bold lg:font-bold lg:text-xl p-2 mt-3">CART</h1>
     <div
       class="flex flex-col h-[150px] w-[100%] px-5 justify-between border-b-2 mt-3 bg-white p-2"
       v-for="item in cartItems"
@@ -50,6 +45,11 @@
           </button>
         </div>
       </div>
+    </div>
+    <h1 class="text-xl font-bold p-2 mt-2">CART SUMMARY</h1>
+    <div class="flex flex-row justify-between mt-2 p-3 bg-white">
+      <p class="text-sm font-normal text-gray-600">Subtotal</p>
+      <p class="text-xl font-bold">₦{{ totalPrice }}</p>
     </div>
     <Paystack
       :amount="totalPrice"

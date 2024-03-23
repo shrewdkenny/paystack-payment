@@ -32,7 +32,6 @@
             :key="product.id"
             :product="product"
             @addingToCart="handleAddToCart(product)"
-            
           />
         </div>
       </div>
@@ -190,12 +189,13 @@ export default {
       Swal.fire({
         imageUrl:
           "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNlP8OJ8McU0-mWFp9sn5HBUlu_bTLXuMoldMX3og4YA&s",
-        position: "top-center",
-        width: "300px",
-        heightAuto: "true",
+        position: "top-end",
+        width: "200px",
+        height: "10px",
         imageHeight: "80px",
         color: "black",
-        title: "Added To Cart",
+        title:
+          "<span style='font-size: 20px; font-family: sans-serif;'>Added To Cart</span>",
         showConfirmButton: false,
         timer: 500,
       });
