@@ -2,11 +2,6 @@
   <nav
     class="flex px-5 flex-row w-full justify-between my-5 lg:flex lg:flex-row lg:justify-between lg:px-20 lg:mt-8 h-[5vh]"
   >
-    <router-link to="/">
-      <div class="flex text-2xl lg:hidden">
-        <i class="fa-solid fa-house"></i></div
-    ></router-link>
-
     <div class="font-thin font-mono text-2xl drop-shadow-2xl">
       <router-link to="/"> NorthStar</router-link>
     </div>
@@ -22,7 +17,7 @@
         <router-link to="/cart">
           <div class="text-2xl"><i class="fa-solid fa-cart-shopping"></i></div>
           <h1
-            class="absolute top-[-19px] left-2 text-lg lg:absolute lg:top-[-16px] lg:left-2 text-orange-500 lg:text-sm font-serif"
+            class="absolute top-[-12px] text-sm left-5 lg:absolute lg:top-[-12px] lg:left-5 text-orange-500 lg:text-sm font-serif"
           >
             {{ increaseCount.count }}
           </h1>
