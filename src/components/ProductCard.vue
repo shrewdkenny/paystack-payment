@@ -1,19 +1,21 @@
 <template>
   <div class="flex w-full flex-col justify-between px-2 relative">
-    <img :src="product.pictures[0]" alt=""  />
-    <h1 class="flex justify-center items-center text-sm font-bold mt-2">
+    <img :src="product.pictures[0]" alt="" />
+    <h1 class="flex justify-center items-center text-sm font-bold mt-4">
       {{ product.labelText }}
     </h1>
 
-    <h2 class="flex justify-center items-center text-sm text-blue-600 mb-7">
+    <h2 class="flex justify-center items-center text-sm text-gray-600 mb-7">
       ₦{{ product.price }}
     </h2>
-    <button
+    <div
       @click="showProduct"
-    class="absolute text-white bg-orange-400 items-center text-sm h-12 w-[374px] top-[386px] lg:top-[352px] lg:w-[344px]"
+      class="absolute text-white bg-orange-400 text-lg font-semibold h-12 w-[374px] flex justify-between items-center top-[386px] lg:top-[352px] lg:w-[344px]"
     >
-      Add To Cart
-    </button>
+      <div class="ml-2"><i class="fa-solid fa-cart-shopping"></i></div>
+
+      <button class="mr-10">Add To Cart</button>
+    </div>
   </div>
 </template>
 
