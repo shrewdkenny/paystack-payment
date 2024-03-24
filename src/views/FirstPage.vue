@@ -23,7 +23,7 @@
         <p class="mt-5 font-light">Recently added shirts!</p>
       </div>
 
-      <div class="mt-10 lg:mt-[100px] px-5 w-full">
+      <div class="mt-10 lg:mt-[100px] w-full">
         <div
           class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
         >
@@ -32,14 +32,15 @@
             :key="product.id"
             :product="product"
             @addingToCart="handleAddToCart(product)"
+            class="w-[100%]"
           />
         </div>
       </div>
 
       <div
-        class="flex-col gap-2 mt-20 lg:mt-[90px] flex lg:flex-row justify-between space-x-5 px-10 w-full h-40"
+        class="flex-col px-5 gap-2 mt-20 lg:mt-[90px] flex lg:flex-row justify-between space-x-5 lg:px-10 w-full h-40"
       >
-        <div class="flex flex-row space-x-[20px]">
+        <div class="flex flex-row space-x-[22px] ml-4">
           <div class="text-blue-600 text-2xl">
             <i class="fa-solid fa-truck"></i>
           </div>

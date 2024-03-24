@@ -1,7 +1,7 @@
 <template>
-  <div class="flex flex-col justify-between items-center relative">
-    <img :src="product.pictures[0]" alt="" class="rounded-lg" />
-    <h1 class="flex justify-center items-center text-sm font-bold mt-1">
+  <div class="flex w-full flex-col justify-between px-2 relative">
+    <img :src="product.pictures[0]" alt=""  />
+    <h1 class="flex justify-center items-center text-sm font-bold mt-2">
       {{ product.labelText }}
     </h1>
 
@@ -10,7 +10,7 @@
     </h2>
     <button
       @click="showProduct"
-      class="m-5 bg-black flex h-[50px] w-[295px] justify-center text-center items-center text-sm text-white absolute top-[272px]"
+    class="absolute text-white bg-orange-400 items-center text-sm h-12 w-[374px] top-[386px] lg:top-[352px] lg:w-[344px]"
     >
       Add To Cart
     </button>
