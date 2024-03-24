@@ -7,8 +7,16 @@ export const useCart = defineStore("CartStore", {
   }),
   actions: {
     addToCart(product) {
+      const existingProductIndex = this.items.findIndex(
+        (item) => item.id === product.id
+      );
+      if (existingProductIndex !== -1) {
+        return false;
+      }
+
       this.items.push({ ...product, quantity: 1, initialPrice: product.price });
       this.count++;
+      return true;
     },
     increaseQty(index) {
       this.items[index].quantity++;

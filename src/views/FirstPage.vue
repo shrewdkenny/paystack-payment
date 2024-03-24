@@ -1,7 +1,7 @@
 <template>
   <main class="h-screen w-full bg-[#ffff]">
     <section
-      class="bg-[url('@/assets/images/six.png')] bg-cover h-[50vh] lg:py-[100px] lg:bg-cover bg-no-repeat flex flex-col lg:justify-end items-end w-full lg:h-[80vh]"
+      class="bg-[url('@/assets/images/six.png')] bg-cover h-[50vh] lg:py-[100px] lg:bg-cover bg-no-repeat flex flex-col lg:justify-end items-end lg:w-full lg:h-[80vh]"
     >
       <div class="w-[500px] mb-[300px]">
         <h1
@@ -179,26 +179,47 @@ export default {
           quantity: 1,
         },
       ],
+      showAlert: true,
     };
   },
   props: {},
   methods: {
     handleAddToCart(product) {
       const cartStore = useCart();
-      cartStore.addToCart(product);
-      Swal.fire({
-        imageUrl:
-          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNlP8OJ8McU0-mWFp9sn5HBUlu_bTLXuMoldMX3og4YA&s",
-        position: "top-end",
-        width: "200px",
-        height: "10px",
-        imageHeight: "80px",
-        color: "black",
-        title:
-          "<span style='font-size: 20px; font-family: sans-serif;'>Added To Cart</span>",
-        showConfirmButton: false,
-        timer: 500,
-      });
+      const isProductAdded = cartStore.addToCart(product);
+
+      if (!isProductAdded) {
+        Swal.fire({
+          imageUrl:
+            "https://www.shutterstock.com/image-vector/no-sign-empty-red-crossed-600nw-770473612.jpg",
+          position: "top-end",
+          width: "200px",
+          height: "10px",
+          imageHeight: "50px",
+          color: "black",
+          title:
+            "<span style='font-size: 20px; font-family: sans-serif;'>Already In Cart</span>",
+          showConfirmButton: false,
+          timer: 500,
+        });
+        return;
+      }
+
+      if (this.showAlert) {
+        Swal.fire({
+          imageUrl:
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNlP8OJ8McU0-mWFp9sn5HBUlu_bTLXuMoldMX3og4YA&s",
+          position: "top-end",
+          width: "200px",
+          height: "10px",
+          imageHeight: "80px",
+          color: "black",
+          title:
+            "<span style='font-size: 20px; font-family: sans-serif;'>Added To Cart</span>",
+          showConfirmButton: false,
+          timer: 500,
+        });
+      }
     },
   },
 };
