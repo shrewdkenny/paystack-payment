@@ -198,7 +198,7 @@ export default {
           imageHeight: "50px",
           color: "black",
           title:
-            "<span style='font-size: 20px; font-family: sans-serif;'>Already In Cart</span>",
+            "<span style='font-size: 20px; font-family: sans-serif;'>already in cart</span>",
           showConfirmButton: false,
           timer: 500,
         });
@@ -215,7 +215,7 @@ export default {
           imageHeight: "80px",
           color: "black",
           title:
-            "<span style='font-size: 20px; font-family: sans-serif;'>Added To Cart</span>",
+            "<span style='font-size: 20px; font-family: sans-serif;'>added to cart</span>",
           showConfirmButton: false,
           timer: 500,
         });
