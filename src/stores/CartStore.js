@@ -1,5 +1,4 @@
 import { defineStore } from "pinia";
-
 export const useCart = defineStore("CartStore", {
   state: () => ({
     items: [],

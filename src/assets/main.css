@@ -2,9 +2,3 @@
 @tailwind components;
 @tailwind utilities;
 
-.container {
-  padding-left: 5%;
-  padding-right: 5%;
-  margin: auto;
-  max-width: 1400px;
-}
