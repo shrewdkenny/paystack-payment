@@ -188,14 +188,12 @@ export default {
     handleAddToCart(product) {
       const cartStore = useCart();
       const isProductAdded = cartStore.addToCart(product);
-
       if (!isProductAdded) {
         Swal.fire({
           imageUrl:
             "https://www.shutterstock.com/image-vector/no-sign-empty-red-crossed-600nw-770473612.jpg",
           position: "top-end",
           width: "200px",
-          height: "10px",
           imageHeight: "50px",
           color: "black",
           title:
@@ -212,7 +210,6 @@ export default {
             "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNlP8OJ8McU0-mWFp9sn5HBUlu_bTLXuMoldMX3og4YA&s",
           position: "top-end",
           width: "200px",
-          height: "10px",
           imageHeight: "80px",
           color: "black",
           title:
