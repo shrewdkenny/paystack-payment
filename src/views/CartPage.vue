@@ -94,7 +94,6 @@ export default {
       if (cartItems[index].quantity === 1) {
         return;
       }
-
       const item = cartItems[index];
       cartStore.decreaseQty(index);
       item.price = (item.initialPrice * item.quantity).toFixed(2);
