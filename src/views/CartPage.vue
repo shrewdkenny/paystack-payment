@@ -1,5 +1,5 @@
 <template>
-  <div class="h-[100vh] w-full flex flex-col bg-[#f1f1f2]">
+  <div class="h-[100vh] w-full flex flex-col bg-[#f1f1f2] scroll-smooth">
     <h1 class="text-sm font-bold lg:font-bold lg:text-xl p-2 mt-3">CART</h1>
     <div
       class="flex flex-col h-[150px] w-[100%] px-5 justify-between border-b-2 mt-3 bg-white p-2"

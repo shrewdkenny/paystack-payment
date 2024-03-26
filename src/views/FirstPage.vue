@@ -1,5 +1,5 @@
 <template>
-  <main class="h-screen w-full bg-[#ffff]">
+  <main class="h-screen w-full bg-[#ffff] scroll-smooth">
     <section
       class="bg-[url('@/assets/images/six.png')] bg-cover h-[50vh] lg:py-[100px] lg:bg-cover bg-no-repeat flex flex-col lg:justify-end items-end lg:w-full lg:h-[80vh]"
     >
