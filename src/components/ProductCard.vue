@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col">
     <div
-      class="w-[100%] h-[300px] bg-cover flex flex-col justify-end rounded-sm"
+      class="h-[500px] bg-cover bg-repeat-0 bg-center flex flex-col justify-end rounded-sm"
       :style="{ 'background-image': 'url(' + product.pictures[0] + ')' }"
     >
       <div
