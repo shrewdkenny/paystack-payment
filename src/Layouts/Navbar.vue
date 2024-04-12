@@ -5,6 +5,7 @@
     <div class="font-thin font-mono text-2xl drop-shadow-2xl">
       <router-link to="/"> NorthStar</router-link>
     </div>
+ 
     <ul class="hidden lg:flex flex-row space-x-4 font-semibold">
       <li><router-link to="/"> HOME</router-link></li>
       <li>ABOUT</li>

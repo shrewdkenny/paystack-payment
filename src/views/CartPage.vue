@@ -122,7 +122,7 @@ export default {
       closeFunction,
     };
   },
-  methods: {},
+ 
 };
 </script>
 <style lang="scss" scoped></style>

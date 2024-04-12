@@ -1,5 +1,5 @@
 <template>
-  <main class="h-screen w-full bg-[#ffff] scroll-smooth">
+  <main class="h-screen w-full scroll-smooth bg-white">
     <section
       class="bg-[url('@/assets/images/six.png')] bg-cover h-[50vh] lg:py-[100px] lg:bg-cover bg-no-repeat flex flex-col lg:justify-end items-end lg:w-full lg:h-[80vh]"
     >
@@ -9,6 +9,7 @@
         >
           STYLIST PICKS BEAT THE HEAT
         </h1>
+
         <button
           class="hidden lg:text-xl text-white font-medium border-white border-[3px] ml-[50px]"
         >
@@ -23,18 +24,14 @@
         <p class="mt-5 font-light">Recently added shirts!</p>
       </div>
 
-      <div class="mt-10 lg:mt-[100px] w-full">
-        <div
-          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
-        >
-          <ProductCard
-            v-for="product in products"
-            :key="product.id"
-            :product="product"
-            @addingToCart="handleAddToCart(product)"
-            class="w-[100%]"
-          />
-        </div>
+      <div class="grid md:grid-cols-4 lg:px-2 w-[100vw] mt-20 gap-3">
+        <ProductCard
+          v-for="product in products"
+          :key="product.id"
+          :product="product"
+          @addingToCart="handleAddToCart(product)"
+          class="w-[100%]"
+        />
       </div>
 
       <div

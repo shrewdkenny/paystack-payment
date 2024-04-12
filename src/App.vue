@@ -9,5 +9,5 @@ import NavbarLayout from "./Layouts/Navbar.vue";
     </div>
   </header>
   <NavbarLayout />
-  <RouterView />
+  <div class="max-width-7xl mx-auto pt-4"><RouterView /></div>
 </template>
