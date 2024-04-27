@@ -30,7 +30,7 @@ export default {
   setup(props) {
     const cartStore = useCart();
 
-    const initializePayment = async () => {
+    const initializePayment = async () => { 
       if (typeof window.PaystackPop !== "undefined") {
         const handler = window.PaystackPop.setup({
           key: "pk_test_45bea0e6f89e6dca5b5776a0715d360a3e72f1ee",
